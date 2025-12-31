@@ -1204,11 +1204,10 @@ function toggleAudio() {
 
     function updateCountdown() {
         const now = new Date();
-        const tomorrow = new Date(now);
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        tomorrow.setHours(0, 0, 0, 0);
+        // Target: January 1, 2026 at midnight (Bangladesh Time UTC+6)
+        const targetDate = new Date('2026-01-01T00:00:00+06:00');
         
-        const diff = tomorrow - now;
+        const diff = targetDate - now;
         
         if (diff <= 0) {
             clearInterval(countdownInterval);
@@ -1458,3 +1457,4 @@ function celebrate() {
 </script>
 </body>
 </html>
+
