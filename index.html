@@ -23,6 +23,47 @@
 .heart-fill {
     animation: fillHeart 3s ease-in-out forwards;
 }
+.cursor-heart {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 20;
+    opacity: 0.35; /* VERY DIM */
+    animation: cursor-heart-fade 1.2s ease-out forwards;
+    filter: blur(0.3px);
+}
+
+.cursor-heart::before,
+.cursor-heart::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.cursor-heart::before {
+    left: -5px;
+}
+
+.cursor-heart::after {
+    top: -5px;
+}
+
+@keyframes cursor-heart-fade {
+    0% {
+        transform: rotate(45deg) scale(1);
+        opacity: 0.35;
+    }
+    100% {
+        transform: rotate(45deg) scale(1.6);
+        opacity: 0;
+    }
+}
+
 .heart-container {
     z-index: 10;
 }
@@ -798,22 +839,23 @@
             background: inherit;
         }
 
-        @keyframes float-hearts {
-            0% {
-                transform: translateY(100vh) rotate(45deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(405deg);
-                opacity: 0;
-            }
-        }
+@keyframes float-hearts {
+    0% {
+        transform: translate(0, 100vh) rotate(45deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: translate(var(--drift), 20vh) rotate(225deg) scale(1);
+    }
+    100% {
+        transform: translate(calc(var(--drift) * 1.6), -120vh) rotate(405deg) scale(0.9);
+        opacity: 0;
+    }
+}
+
 
         @media (max-width: 768px) {
             .heart-container {
@@ -1347,6 +1389,9 @@ function createSimpleHeart() {
         
         document.getElementById('effectsLayer').appendChild(heart);
         setTimeout(() => heart.remove(), 7000);
+        const drift = (Math.random() * 200 - 100) + 'px';
+heart.style.setProperty('--drift', drift);
+
     }
 
     function createColorfulHeart() {
@@ -1367,6 +1412,9 @@ function createSimpleHeart() {
         
         document.body.appendChild(heart);
         setTimeout(() => heart.remove(), 7000);
+        const drift = (Math.random() * 200 - 100) + 'px';
+heart.style.setProperty('--drift', drift);
+
     }
 
     function createNicknameLantern() {
@@ -1528,7 +1576,7 @@ function celebrate() {
     /* ================= CONTINUOUS EFFECTS ================= */
 
     // 💖 Fancy hearts – smooth & visible
-    heartInterval = setInterval(createColorfulHeart, 800);
+    heartInterval = setInterval(createColorfulHeart, 1200);
 
     // 🏮 Lanterns – SLOW romantic flow (after burst)
     setTimeout(() => {
@@ -1608,6 +1656,29 @@ function celebrate() {
     window.addEventListener('load', () => {
     document.querySelector('.heart-container')?.classList.add('active');
 });
+let lastHeartTime = 0;
+
+document.addEventListener('pointermove', (e) => {
+    // ignore scrolling gestures
+    if (e.pointerType === 'touch' && e.pressure === 0) return;
+
+    const now = Date.now();
+    if (now - lastHeartTime < 80) return; // slower on mobile
+    lastHeartTime = now;
+
+    const heart = document.createElement('div');
+    heart.className = 'cursor-heart';
+
+    heart.style.left = e.clientX + 'px';
+    heart.style.top = e.clientY + 'px';
+
+    heart.style.background = 'rgba(255,105,180,0.35)';
+    heart.style.filter = 'drop-shadow(0 0 5px rgba(255,105,180,0.25))';
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1200);
+});
+
 
 </script>
 </body>
