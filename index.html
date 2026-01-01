@@ -14,6 +14,44 @@
 .exact-text {
   white-space: pre-wrap;
 }
+#effectsLayer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+.heart-fill {
+    animation: fillHeart 3s ease-in-out forwards;
+}
+.heart-container {
+    z-index: 10;
+}
+
+.big-heart {
+    z-index: 2;
+}
+
+.heart-fill {
+    z-index: 1;
+}
+
+.heart-name {
+    z-index: 3;
+}
+
+.heart-wrapper {
+    position: fixed;
+    bottom: -40px;
+    font-size: 26px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.colorful-heart {
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
         body {
             font-family: 'Georgia', serif;
             background: #0a0a1a;
@@ -109,9 +147,21 @@
             background: linear-gradient(135deg, #1a0a2e 0%, #2d1b3d 50%, #4a1942 100%);
         }
 
-        .landing-page.hidden {
-            animation: fadeOut 1s forwards;
-        }
+.landing-page.hidden {
+    animation: fadeOut 1s forwards;
+    pointer-events: none;
+}
+.heart {
+    top: 0;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 
         @keyframes fadeOut {
             to {
@@ -840,6 +890,7 @@
     </style>
 </head>
 <body>
+    <div id="effectsLayer"></div>
     <!-- Aurora Borealis Background -->
     <div class="aurora-container">
         <div class="aurora aurora-1"></div>
@@ -895,146 +946,193 @@
         </div>
 
         <div class="message-box" id="messageBox">
-            <p class="exact-text">Assalamulaikum Shona ❤️✨
-Happy new year Tory ❤️✨
-Amar jaannnnn ❤️🤭
+            <p class="exact-text"> 
 
-Ei New Year ta amar jonno just bochor change naaah, ei New Year mane ami aro 365days paisi tomake bhalobashar jonno hehe ei 365days gulao tomake ami aro notun notun 365 ways e bhalobashbo jaan ❤️
-Ajk raat e Jokhon 12 ta bajbe, shobai bomb tomb futabe akash e fanush atosh diye to full akash e ajk colorful hoye jabe shobai e toh dekhbe, ar ami? 😳
-Jano ami ki korbo ? 🤭
-Ami tmr kotha mone korbo, apnr chokh gula, apnr hashi, apnr awaj, apnr naam arrrrrr Amar shobcheye shundor memories gulo shob tmr sathe ❤️
+Assalamulaikum Shona ❤️
+Happy new year Tory ❤️✨🌸
+Amar jaannnnn ❤️🤭
 
-Jano, tmr sathe kotha bolar choto choto moments gula amar kache kottttttoooo beshi mullban, oenk onek onek e beshi mulloban shona 🥺
-Tmr “hmm”, tarpor apnr halka halka rag, apnr ador, mul kotha tmr shob kichu amar mone permanently gethe geche ❤️
-Koto din, koto raat ami tmr kotha bhabte bhabte kanna korsi 😭
-Raat e bhabte bhabte ghumaisi 🥲
-Tarpore just emnei ami tmr kotha bhabte bhabtei haray gesi 😵
-Kottto bar amar nijer o dharona nai 🥺
-Ar protibar e mone hoy ei meyetai amar shob ❤️
+Ei New Year ta amar jonno just bochor change naaah, ei New Year mane ami aro 365days paisi tomake bhalobashar jonno hehe 😉❤️
+ei 365days gulay tomake ami aro notun notun 365 ways e bhalobashbo jaan. ❤️😳
 
-Amar prithibi tumi tory 🌍
-Amar jannat o tumi jaan 🌸
-I love you ❤️
-fid-dunya , wal-akhirah shona 🙏🏻
-Tomake sudhu ei dunya te chai naki tomakei to ami smner dunya teo chai jaannn 🥹
+Ajk raat e Jokhon 12 ta bajbe, shobai toh bomb tomb futabe akash e fanush urabe Tarpor atosh diye to full akash ajk colorful hoye jabe shobai e toh dekhbe, 
+ar ami? 
+Jano ami ki korbo ? 
+Ami tmr kotha mone korbo ❤️🙈
+Tmr chokh gula ❤️
+Tmr hashi ❤️
+Tmr kopal ❤️
+Tmr mathar Chul ❤️
+Tmr Thoth gula ❤️
+Tmr Thoth er corner ❤️
+Tmr naak ❤️
+Tmr awaj ❤️
+Tmr naam ❤️
+Tmr eyebrows gula ❤️😂
+Tmr kaan gula 🌚🤣❤️
+Tmr kotha batra ❤️
+arrrrrr Amar shobcheye shundor memories gula tmr sathe 😭❤️❤️
 
-Amra hoyto shob shomoy eksathe thakte parina 🥲
-Kotha bolte parina 😥
-Dekha korte parina 💔
-Dekha toh ekdomi kortei pari nah 🥲
-Kintu tao tmr uposthiti amar mon theke ek second er jonno o jay na ❤️
-Ami jekhanei thaki, jai kori, tmr naam er shathe cholte thaki 😌
-Sateh abar tomar bhoot keo niye ghuri hehe 😂
-Tmr ekta choto message amar pura din onek bhalo kore dey 🥹
-Ar tmr ekta choto hashi amar duniya oenkkkk beshi shundor kore dey 😭
+Jano, tmr sathe kotha bolar choto choto moments gula amar kache kottttttoooo beshi mullban 👉🏻👈🏻❤️
+oenk onek onek e beshi mulloban shona. ❤️🥹
+Apnr “hmm”, tarpor apnr halka halka rag, apnr ador, mul kotha tmr shob kichu amar mone permanently gethe geche jaan. ❤️Koto din, koto raat ami tmr kotha bhabte bhabte kanna korsi raat e, bhabte bhabte ghumaisi tarpore just emnei ami tmr kotha bhabte bhabtei haray gesi j kottto bar amar nijer o dharona nai ar protibar e mone hoy ei meyetai amar shob ❤️🥺
+Please amake chere jaio nah Shona ❤️
+Ami Shotti e seriously kono bhabhei bachbo nah tomake chara asolei Mara jabo Ami jaan ar Ami bachte chai o nah tomake chara ❤️
 
-Ki shanti ta lage amar allahhh 🙏🏻
-Ajk raat e secretly asha kortesi tumi tmr ekta chobi diba 😳
-Hoyto deuyar shujog paba nah 🥲
-Kintu wait korbo ami 🤭
-Ar ekdomi na parle tmr kache chaya nibo 🥺
-Ekhon je eita likhtesi akhn thikei khub mon chacche tomake dekhte 😭
-Tumi ei ajker din e amar smne thakle ki bhalo hoito jaan 🥺
-Ami exactly 12ta baje tomake hug kore happy new year boltam 🤗
-Aro hoyto kichu kortam 😳
 
-Jaan mone ache amader oi chotto chotto kotha gula 🥹
-Amader eksather shomoy gula 🫶🏻
-Amder duijoner ekjon er proti arekjon er feelings? ❤️
-Eigulo amar jibon er shobcheye daami jinish shona 🥺
-Mulloban? 😌
-Nahhh omulloban tumi amar jonno ❤️
-Amar jibone tomake keo e ba kichui replace korte parbe nah jaan 🥹
-Never shombhob e nah ❤️
-Amar chokh e amar jonno tumi e ei dunya ar jannat eo shobche shundor meye 😍
-Tumi e thakba pakhi 🫶🏻
-Shob shomay tumi e thakba ❤️
-Ja e hoye jak 😌
-Eita ami guarantee diyei bolte parbo ❤️
-Je amar jei bhalo laga ar tomake ami jei poriman pochondo kori eita konodin bodlabe nahhhhh 😭
-Neverrrr jaan never ❤️
-Apnr sathe katano prottekta moments ami amar buker sathe joray rakhsi jaan 🫶🏻
-Jemon kore ami tmkei joriye rakhte chai 🥹
+Amar pura dunya tumi tory ❤️🥺 Amar jannat o tumi jaan ❤️🌸✨ I love you ❤️🤭 fid-dunya , wal-akhirah shona ❤️🌙 Tomake sudhu ei dunya te chai naki 🤭❤️ tomakei to ami smner dunya teo chai jaannn pakhiiiii ❤️
 
-Ei New Year e ami ekta jinish e chai 🥺
-Tmr haath ta chirokal amar haath er moddhei thakuk ❤️
-Tory jano onek bhoy pai ami 😥
-Judi tomake haray feli 😭
-Keo judi amar thike tomake niye jay 💔
-Jaan ami onek bhalobashi tomake ❤️
-Please amake chere jaio nah 🙏🏻
-Please amar pokkhe jibon oshombhob hoye jabe 🥺
-Ami parbo nah tomake chara 😭
-Ekta din o na 🥲
-Ekta second o na 💔
-Amar jonno jahannam er moto tomake chara 😭
-Jodi pura dunya o apnr against e hoye jay 🌍
-Ami tao apnr shathei thakbo ❤️
-Apnr pashe pashe hehe 🫶🏻
+Ei bochor kotto kichu hoilo koto jhamela hoilo 🙂
+tumi Dhakay Aisha Mon kharap korla Shanto chacchur mojay pore ar ashba nah Kokhono boila choila gela 
+Tarpore munna chacchu lagailo pech tumi ragg koira choila gela then bashay kotobar janlo amader kintu ei shob er poreo tumi abar Amar Kache Aisha Porso toh Shona 🥺❤️ eishob bhablei eije kanna Ashe Abaro emotional hoye jacchi. ar amio toh oppekkha Korsi upay khujchi Tmr sathe contact korar ❤️
+Ishhhhiii re nah asolei gesi Ami 😂😭
+I love you jaan ❤️✨
+Baki ta 5min pore likhi ektu chokh Mukh muche fresh hoye ashi new year er din o kanna Kati manay naki kintu asolei onekdin pore Dukkher kanna korlam normally you khushi tei chokh e paani Aisha pore ❤️
+Tumi etoi khushi kore deu amake ❤️🙈
+Othoba bhoy er karone hoy ajk ager gula mone kore koste ar parlam nah 🥲
+Kintu jaan dekhso Kono jhamelai amader alada korte pare nai ar kono jhamelai amader Kokhono alada korteo parbe nah ❤️🙏🏻
+jaan konodin o shombhob nah eita. Amra shob Shomay e upay ber kore nibo ar upay na thakle Ami upay banay nibo Tmr jonno jaan ❤️💪🏻
 
-Tmr kosto, tmr bhoy, tmr shob dukkho ami nijer kore nite chai 🥹
-All of your insecurities too ❤️
-I will actually kiss every one of your insecurities jaan promise 😘
-Ar tmr shob hashir jonno 🥰
-Shob khushir jonno 😍
-Ami tmr pashe thakte chai jaan ❤️
-Ami chai amar bhag er sukh tuku o tmi e jate pau 🫶🏻
-Amar hayat tao jate tmr hoye jay 🥹
-Ami eitai chai jaan ❤️
+Amra hoyto shob shomoy eksathe thakte parina, kotha bolte parina, dekha korte parina. Dekha toh ekdomi kortei pari nah 🙂🥲
+kintu tao apnr uposthiti(presence) ta amar mon theke ek second er jonno o jay na. ❤️
+Ami jekhanei thaki, jai kori, tmr naam er sathei cholte thaki sathe abar toh tomar bhoot keo niye ghuri hehe. ❤️😉
 
-Amar ei dunyar maya shotti bolte akhn ar asolei nai 😔
-Akhn ase sudhu apnr maya ❤️
-Ei tory er maya tei beche asi 🥹
-Tomake chara ar kicchui lagbe nah amar jaan 😭
-Ei dunya te kicchu na mane kicchuii nahhhhhhh 💔
+Tmr ekta choto message amar pura din j koto bhalo kore dey, ar tmr ekta hashi amar pura prithibi oenkkkk beshi shundor kore dey jaan ❤️🥹
+Ki shanti ta lage amar allahhh ❤️😳 Ajk raat e secretly asha kortesi tumi tmr ekta chobi diba 👉🏻👈🏻❤️
+hoyto deuyar shujog paba nah 🥲
+kintu wait korbo ami ❤️🌚
+ar ekdomi na parle tmr kache chaya nibo ne ❤️😭
+akhn je eita likhtesi akhn thikei khub mon chacche tomake dekhte ❤️😳
+Amar onek iccha chil ei ajker din ta Ami amar jaan tar sathe katabo ❤️🥺
+ki bhalo hoito jaan Amra eksathe thakle bhabso ❤️🤭
+ami exactly 12ta baje tomake hug kore happy new year boltam ❤️🥳
+Kintu aro to hoyto kichu kortam Ami ❤️😳
+Jahhhh dhur lojjaaaaa 🙈❤️
+Onek lojjjjaaaaaa 🙏🏻❤️
 
-Ei notun bochor eo ami beshi beshi care korte chai ❤️
-Apnr etto gula ador korbo 🫶🏻
-Ei bochor puratay 🥰
-Biyer ag porjonto 🥺
-Ki j kosto ta hobe amar baba re 😭
-Tomake chara din gula kataite uffff 💔
-Ekta bar biye ta kore nei 💍
-Trapore deikho jahhhh 🤭
-Lojjai lage ❤️
+Jaan tumi amar jibon er shobcheye daami part ❤️
+mulloban ? nahhh omulloban tumi amar jonno amar jibone ❤️🥹
 
-jaan, tumi sudhu amar bhalobasha na ❤️
-Tumi amar safe placee 🫶🏻
-Amar ekmatro shanti 😌
-Amar shob cheye shundor shopno 🥹
-Tumi amar future ❤️
-Amar wifey to apni hehe 🤭
-Boujaan apni amar 💍
+Amar ei jibon naam er boi tay Tmr oddhay ta Amar shobche priyo jaan ❤️
+Ami shob Shomay e bar bar ei oddhay firot ashte chai ar abar eikhanei bachte chai Tmr moddhe ❤️
+Ami shob Shomay e bar bar porbo ei uddhay ta Shona ❤️ 
 
-Ei New Year er din e ami abar promise kortesi 🙏🏻
-Ami tmk ager cheyeo beshi bhalobashbo ❤️
-Ager cheyeo beshi ador korbo 🫶🏻
-Ager thikeo beshi jotno korbo 🥹
-Ager cheyeo beshi kheyal rakhbo ❤️
-Ar amar protita duya te apnr e naam thakbe 🙏🏻
+Shuno tomake keo e, ba kichui replace korte parbe nah jaan ❤️😉
+never shombhob e nah ❤️
+Tumi amake jei poriman shanti deu ta keo e ba kono jinish e amake dite parbe nah Ami chaileo kothao khuje pabo nah Tmr ei sukh ar shanti Karon eita Sudhu tumi e dite paro amake ettooo beshi beshi kore ❤️🥺
 
-365days koyta friday hoy? 😅
-Proti mash e 4ta kore 😌
-Taile 12x4 48ta friday 😅
-50 e dhoro ❤️
-Ami kotha dicchi 🙏🏻
-Ei 50tar 50ta friday tei ami tmr naam e daan korbo 🤲🏻
-Ar in-sha-allah 50ta friday e namaj porte jabo 🙏🏻
-Jeidin parbo nah oidin o daan koira dibo ❤️
-Chinta koiro nah 🥹
+Amar chokh e amar jonno tumi e ei dunyar shobche shobche shobche Shundor meye Tory ❤️🌸✨
+ar jannat eo shobche shundor meye tumi e thakba Amar jonno jaan ❤️
+ shob shomay e tumi thakba ja e hoye jak ❤️
+eita ami guarantee diyei bolte parbo je amar jei bhalo laga Tmr proti ar tomake ami jei poriman pochondo kori eita konodin bodlabe nahhhhh neverrrr jaan never. ❤️🤭
 
-Happy New Year jaan ❤️
-Amar shob shomoy ❤️
-Amar shob bhalobasha ❤️
-Amar shob future tmr jonnoi shona pakhi 🫶🏻
+Tmr sathe katano prottekta muhurto gula Ami amar buker sathe joray dhore rakhsi jaan, jemon kore ami tmkei joriye rakhte chai 😭😳😳🙈🙈❤️❤️❤️❤️
 
-Tory… ❤️
-Ei New Year e ami shudhu ekta wish kori 🥺
-Tmr shobcheye kacher manush ta jate ami e thaki ❤️
-Ei bochor o jaan 🫶🏻
+Ei New Year e ami ekta jinish e chai tmr haath ta chirokal amar haath er moddhei thakuk ❤️
+tory jano jaan ami na onek beshi bhoy pai ami judi tomake haray feli 🙂
+keo judi amar thike tomake niye jay 🙂
+jaan ami onek bhalobashi tomake ❤️🥺
+please amake chere jaio nah please 🙏🏻❤️
+amar pokkhe jibon oshombhob hoye jabe jaan ❤️🙂
+ami parbo nah tomake chara ekta din o 🙏🏻
+ekta second o amar jonno jahannam er moto tomake chara jaan. ❤️🙂
+Jodi pura dunya o apnr against e chole jay, ami tao apnr shathei thakbo ❤️
+apnr pashe pashe hehe. 😜❤️
+Tmr kosto, tmr bhoy, tmr shob dukkho ami nijer kore nite chai jaan ❤️
+all of your insecurities too. 😉❤️
+I will actually kiss every one of your insecurities jaan promise. ❤️😳🥹
+Ar tmr shob hashir, shob khushir jonno ami tmr pashe thakte chai jaan ❤️
+ami to chai amar bhag er sukh tuku o tmi e jate pau amar hayat tao jate tmr hoye jay ami Shotti eitai chai jaan. ❤️🥺
+Amar ei dunyar maya asolei akhn ar nai akhn ase sudhu Tmr maya ❤️
+Ami ei Amar tory er maya tei beche asi ❤️🥺
+Tomake chara ar kicchui lagbe nah amar jaan ei dunya te ❤️🥹
+kicchu na mane kicchuii nahhhhhhh ❤️🙏🏻
+ ami ei notun bochor eo beshi beshi kore care korte chai apnr ar etto gula ador korbo ei bochor puratay ❤️
+biyer ag porjonto ki j kosto ta hobe amar baba re tomake chara din gula kataite uffff 🙏🏻🙏🏻😭😭❤️
+ekta bar biye ta kore nei trapore deikho ❤️🙈
+jahhhh lojjai lage 😭🙏🏻❤️
+Lojjaaaaa jaaaaan 😭❤️
 
-Happy new year jaan ❤️
-I love you lokkhi meye amar 🥰</p>
+jaan, tumi sudhu amar bhalobasha na tumi amar safe place ❤️✨
+Amar ekmatro shantir Karon ❤️😌
+Amar shobche shundor shopno tumi ❤️
+amar future tumi ❤️
+amar wifey to apni hehe 💍❤️
+boujaan apni amar ❤️🤭
+Also barir ekmatro bou babba amar e toh bhable ki bhalo ta lage. 🙈❤️
+
+Ei New Year er din e ami abar promise kortesi ami tmk ager cheyeo beshi bhalobashbo ❤️
+ager cheyeo beshi ador korbo ❤️
+ager thikeo beshi jotno korbo ❤️
+ager cheyeo beshi kheyal rakhbo ❤️
+ar amar protita dua te apnr e naam thakbe ❤️
+
+365days e koyta friday hoy?  Proti mash e 4ta kore taile 12x4 48ta friday 50 e dhoro 
+ami kotha dicchi ei 50tar 50ta friday tei ami tmr naam e daan korbo ❤️🤲🏻
+ar in-sha-allah 50ta friday e namaj porte jabo ❤️
+jeidin parbo nah oidin o daan koira dibo chinta koiro nah. ❤️🥺
+
+Happy New Year jaan ❤️✨
+Amar shob shomoy, amar shob bhalobasha, amar shob future tmr jonnoi shona pakhi ❤️🥹
+
+Tory ❤️🌸
+Ei New Year e ami ekta wish kortesi, tmr shobcheye kacher manush ta jate ami e thaki ei bochor o jaan. ❤️🥺
+Duniya jotoi ulta palta hok, jotoi dure thaki amra, amar mon ta shob shomoy tmr kachei fire jay. ❤️
+Apnr naam ta amar buker moddhe emon bhabe boshe geche je ami chokh bondho korlei apanke feel korte pari madam. ❤️😳
+Jano onek shomay bhabi judi ami tmr samne boshe thaktam, kichu boltam na shudhu tmr haath ta amar haath er moddhe niye tomake feel kortam nijer kache. ❤️🥺
+Tmr nishash, tmr heartbeat, tmr uposthiti eigulai  amar jonno enough. ❤️
+Tmr sathe thakle amar shob bhoy shanto hoye jay jano jaan. Tmr ekta “ami achi” amar shobcheye boro shokti jaan ❤️💪🏻yaaaaaaaaaaa 💪🏻 
+I want you to know tmr kosto gulo amar kache safe. apni kanna korte chaileo amar buk ta apnr jonnoi khali thakbe shob shomay. Tmr shob weakness ami protect korbo, ar tmr shob shundorjor prem e ami protidin abarr notun kore porbo ❤️🙈🤭
+
+Ei New Year e ami tmk promise kortesi ami tmr proti emon bhabe loyal thakbo jemon raat nijer chaad ta ke dhore rakhe. ❤️🌙
+Ami tmr mood swings, tmr silence, tmr na-bola kotha shob bujhe nibo ❤️
+Jodi tumi chup thako, amio tmr sathe chup thakbo. ❤️🤐
+Jodi tumi bhagte chao, ami tmr shathe bhagbo hehe jei bhaga e bujho ami shob kichu tei raji just tumi thaklei hoilo amar ❤️😉
+
+Ei New Year theke amar protita din, protita raat, protita future er shob shopno tmr naam diyei shuru ar tmr naam diyei sesh. ❤️
+
+Ei New Year ke tohh shobai “new beginnings” “new year resolution” eishob bole, ar ami? Ami shudhu tmr prem ei aro beshi dubte chai. ❤️😌
+Tmr moddhe dube thaktei Amar shanti jaannn ❤️
+Tmr proti Amar pagoler moto Bhalobasha tei Amar ekmatro sukh ar shobche beshi shanti ❤️🥺
+Jano, kichu manush thake jader sathe sudhu bhalobasha hoy na tader sathe moner mil o hoy. Tumi amar shei manush ta jar sathe amar moner mil. Amar mon jokhon tired hoy, duniya jokhon beshi bhari lage, ami shudhu tmr naam ta mone mone boli ar jaadduuuu ❤️😂
+shob shanto hoye jay ❤️🌚
+Amar Tory er magic ❤️🤭
+Amar jaan pakhi ta ❤️
+
+Amar shobcheye vulnerable jaygata tumi. ❤️
+Ami raat e chokh bondho kori, amr mone hoy j apni kachei achen, amar sathei achen. ❤️😳😭😭
+Tmr existence amar mon er upor emon bhabe bosche je ami chaileo oke shoraite parbo nah ❤️🌚
+ami ki keo e parbe nah kokhonoi ami ❤️😉
+Amio ar Kokhonoi kaoke bhalobashte parbo nah jaan 🥺❤️
+Amar ei odhikar ei khomota tumi niye geso ❤️
+Ar Ami bashbo o nah more jabo kintu arekta Meyer dige bhalobashar nozor e konodin takabo nah Tory e Amar jibone ekmatro ❤️✨
+
+Jaan jano ami parle Tmr haath ta amar buk er upor rakhte ditam, jate tumi feel korte paro ei je ei mon ta shudhu tmr jonnoi choltese. ❤️😌
+Tmr strong hoye thakar dorkar nai amar sathe, tmr weak side tao amar kache oenk beshi priyo ar shundor ❤️🥹
+
+Ei New Year e Ami arekta ekta promise kori, ami thakbo. ❤️🧍🏻‍♂️
+Jodi tumi chup hoye jao, ami tao thakbo. ❤️🧍🏻‍♂️
+Jodi tumi dur e chole jao, amar mon tao tmr pashei thakbe. ❤️😌
+Jodi pura duniya ulta hoyeo jay, amar loyalty tmr dikei sudhu tmr digei thakbe. forever ❤️
+
+Shunen ❤️
+Shobche boro kotha ta boli ❤️
+Ajk new year er din e kotha dicchi Ami yash tomake Tory ke biye korbo ❤️
+Jmnei hok jeibhabhei hok biye toh Ami korboi korbo tomake Amar nijer jibon er bepar jaan 😭❤️
+Maa keo Ami manabo baba keo Ami e manabo jaan ❤️ 
+Tofa Apir ta toh bhoy lage kintu Amar e toh manaite hobe biye korte to Ami chai tomake ❤️ 
+Amar family keo mamanor daitto toh Amar e jaan ❤️💪🏻
+Ami Tmr jonno manay nibo shobaike promise ❤️ 
+Abbu ke diye prostab o pathabo kotha disilam na ? Pathabo pathabo shobaike manay Ami tomake biye kore niye ashbooo tumi raji thakle ❤️✨
+
+
+Ami chai ei ekta new year na amar jibone jotto gula new year ashbe ami tmr sathei katai ❤️😌
+jaan sudhu tmr sathe ❤️
+Jeikoydin bachbo tmr sathei bachbo ❤️
+Promise ❤️🌸
+
+Happy new year jaan pakhi ❤️✨ I love you ❤️🌙
+Amar lokkhi meye ❤️😌😘</p>
             <p style="margin-top: 20px; font-style: italic;">- Yash 💖</p>
         </div>
     </div>
@@ -1047,6 +1145,8 @@ I love you lokkhi meye amar 🥰</p>
 <script>
 let effectsStartTime = 0;
 const EFFECTS_DURATION = 5000; // 5 seconds
+let heartInterval = null;
+let lanternInterval = null;
 
 let activeRockets = [];
 let activeFireworks = [];
@@ -1086,7 +1186,13 @@ ambientSound.loop = true; // this one IS supposed to loop
 
     // Landing page animation
     setTimeout(() => {
-        document.getElementById('landingPage').classList.add('hidden');
+const landing = document.getElementById('landingPage');
+landing.classList.add('hidden');
+
+setTimeout(() => {
+    landing.remove(); // 🔥 THIS IS THE KEY
+}, 1200);
+
         setTimeout(() => {
             document.getElementById('mainContent').classList.add('visible');
             initializeApp();
@@ -1226,7 +1332,7 @@ function toggleAudio() {
         document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
     }
 
-    function createSimpleHeart() {
+function createSimpleHeart() {
         const heart = document.createElement('div');
         heart.className = 'heart';
         heart.style.left = Math.random() * 100 + '%';
@@ -1239,7 +1345,7 @@ function toggleAudio() {
         style.textContent = `.heart:before, .heart:after { width: ${size}px; height: ${size}px; } .heart:before { left: ${-size/2}px; } .heart:after { top: ${-size/2}px; }`;
         heart.appendChild(style);
         
-        document.body.appendChild(heart);
+        document.getElementById('effectsLayer').appendChild(heart);
         setTimeout(() => heart.remove(), 7000);
     }
 
@@ -1266,26 +1372,40 @@ function toggleAudio() {
     function createNicknameLantern() {
         const lantern = document.createElement('div');
         lantern.className = 'lantern';
-        lantern.style.left = Math.random() * 100 + '%';
-        lantern.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
-        lantern.style.animationDuration = (Math.random() * 5 + 12) + 's';
+        lantern.style.left = Math.random() * (window.innerWidth - 50) + 'px';
         
-        const nickname = nicknames[Math.floor(Math.random() * nicknames.length)];
+        const drift = (Math.random() - 0.5) * 200;
+        lantern.style.setProperty('--drift', drift + 'px');
         
-        lantern.innerHTML = `
-            <div class="lantern-glow"></div>
-            <div class="lantern-top"></div>
-            <div class="lantern-body">
-                <div class="lantern-flame"></div>
-                <div class="lantern-text">${nickname}</div>
-            </div>
-            <div class="lantern-bottom"></div>
-        `;
+        const body = document.createElement('div');
+        body.className = 'lantern-body';
         
-        document.body.appendChild(lantern);
-        setTimeout(() => lantern.remove(), 20000);
+        const top = document.createElement('div');
+        top.className = 'lantern-top';
+        
+        const bottom = document.createElement('div');
+        bottom.className = 'lantern-bottom';
+        
+        const flame = document.createElement('div');
+        flame.className = 'lantern-flame';
+        
+        const glow = document.createElement('div');
+        glow.className = 'lantern-glow';
+        
+        const text = document.createElement('div');
+        text.className = 'lantern-text';
+        text.textContent = nicknames[Math.floor(Math.random() * nicknames.length)];
+        
+        body.appendChild(top);
+        body.appendChild(bottom);
+        body.appendChild(flame);
+        body.appendChild(glow);
+        body.appendChild(text);
+        lantern.appendChild(body);
+        
+        document.getElementById('effectsLayer').appendChild(lantern);
+        setTimeout(() => lantern.remove(), 15000);
     }
-
     function createFirework(x, y) {
         const colors = ['#ff69b4', '#ff1493', '#ffa07a', '#ff6b9d', '#ffb6c1', '#ff69ff', '#00ffff', '#7fff00'];
         const color = colors[Math.floor(Math.random() * colors.length)];
@@ -1324,7 +1444,7 @@ if (Date.now() - effectsStartTime <= EFFECTS_DURATION) {
             firework.appendChild(particle);
         }
 
-        document.body.appendChild(firework);
+document.getElementById('effectsLayer').appendChild(firework);
         setTimeout(() => firework.remove(), 1500);
     }
 function stopAllEffects() {
@@ -1376,15 +1496,46 @@ function celebrate() {
         ambientSound.play().catch(() => {});
     }
 
+    /* ================= FIREWORKS (5s only) ================= */
+
     celebrationInterval = setInterval(() => {
         for (let i = 0; i < 3; i++) {
             setTimeout(() => launchRocket(), i * 200);
         }
     }, 1000);
 
-    setInterval(createNicknameLantern, 800);
-    setInterval(createColorfulHeart, 400);
+    setTimeout(() => {
+        if (celebrationInterval) clearInterval(celebrationInterval);
+    }, EFFECTS_DURATION);
+
+    /* ================= CLEAR OLD INTERVALS ================= */
+
+    if (heartInterval) clearInterval(heartInterval);
+    if (lanternInterval) clearInterval(lanternInterval);
+
+    /* ================= INITIAL BURST ================= */
+
+    // Fancy hearts burst
+    for (let i = 0; i < 8; i++) {
+        setTimeout(createColorfulHeart, i * 120);
+    }
+
+    // Lantern burst
+    for (let i = 0; i < 6; i++) {
+        setTimeout(createNicknameLantern, i * 220);
+    }
+
+    /* ================= CONTINUOUS EFFECTS ================= */
+
+    // 💖 Fancy hearts – smooth & visible
+    heartInterval = setInterval(createColorfulHeart, 800);
+
+    // 🏮 Lanterns – SLOW romantic flow (after burst)
+    setTimeout(() => {
+        lanternInterval = setInterval(createNicknameLantern, 3500);
+    }, 2000);
 }
+
 
 
     function loadFireworkAudio(input) {
@@ -1454,7 +1605,10 @@ function celebrate() {
             toggleDebug();
         }
     });
+    window.addEventListener('load', () => {
+    document.querySelector('.heart-container')?.classList.add('active');
+});
+
 </script>
 </body>
 </html>
-
